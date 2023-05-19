@@ -1,1 +1,1 @@
-This is test file, added in the feature1 branch
+This is test file, added in the feature1 branch and updated in feature2 branch.
