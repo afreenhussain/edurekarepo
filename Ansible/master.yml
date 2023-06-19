@@ -1,0 +1,8 @@
+--- # conditions yaml
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  role:
+    - apacherole
+    - tomcatrole

@@ -1,0 +1,28 @@
+---
+- name: Install python software
+  yum:
+    name: python
+    state: latest
+
+- name: Install JDK
+  yum: name=java-1.8.0-openjdk state=present
+
+- name: create directories
+  file:
+    path: ~/opt
+    state: directory
+    mode: '0755'
+
+
+- name: downloads packages
+  get_url: url={{apache_package_url}} dest=/opt/{{apache_maven_tar_package_name}}
+
+- name: Extract package
+  unarchive:
+    src: /opt/{{apache_maven_tar_package_name}}
+    dest: /opt
+    remote_src: True
+
+- name: update alternatives
+  command: update-alternatives --install /usr/bin/mvn maven /opt/{{apache_maven_package_name}}/bin/mvn 1001
+~                                                                                                                       ~               

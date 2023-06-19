@@ -1,0 +1,5 @@
+downloads_folder_path: /opt
+apache_maven_tar_package_name: apache-maven-3.9.2-bin.tar.gz
+apache_package_url: https://dlcdn.apache.org/maven/maven-3/3.9.2/binaries/apache-maven-3.9.2-bin.tar.gz
+apache_maven_package_name: apache-maven-3.9.2
+java_yum_package: java-1.8.0-openjdk
